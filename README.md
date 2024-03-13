@@ -36,7 +36,7 @@ Based on the details provided by MECP, the dataset requires scraping from the in
 Some of the parameters which are most relevant in are Price, Manufacturer Number, Feature Property, Sterility, Outer Diameter, Needle Length, Color, Size, Age, Catheter Length and Composition Ingredient as these likely to be those that provide meaningful insights into factors affecting product availability.
 
 
-Reserch Question:
+Research Question:
 
  	
 As per MECP's specifications, the primary objective is to develop a predictive model that can accurately pinpoint times when shortages of medical products are likely to occur. In simpler terms, they aim to use data and analysis to anticipate when there might be a lack of specific medical items, helping them proactively manage their inventory and ensure timely availability of essential products.
