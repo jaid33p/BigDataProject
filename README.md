@@ -33,23 +33,18 @@ Based on the details provided by MECP, the dataset requires scraping from the in
  Catheter Length (float): Length of the catheter (if applicable).
  Composition Ingredient (varchar): Composition or ingredients of the product.
 
-
-
-
-
-
+Some of the parameters which are most relevant in are Price, Manufacturer Number, Feature Property, Sterility, Outer Diameter, Needle Length, Color, Size, Age, Catheter Length and Composition Ingredient as these likely to be those that provide meaningful insights into factors affecting product availability.
 
 
 Reserch Question:
 
  	
-According to the requirements outlined by MECP, the main goal is to create a predictive model capable of precisely identifying periods when there will be shortages of medical products.
+As per MECP's specifications, the primary objective is to develop a predictive model that can accurately pinpoint times when shortages of medical products are likely to occur. In simpler terms, they aim to use data and analysis to anticipate when there might be a lack of specific medical items, helping them proactively manage their inventory and ensure timely availability of essential products.
 
 
 Model Class:
 
-According to the specifications, our strategy involves employing supervised learning models for training. This choice is driven by the necessity to recognize patterns that indicate when a product runs out of stock and determine the specific days of the year when this typically occurs.
-
+As per the outlined specifications, our approach entails utilizing supervised learning models for the training process. This decision is motivated by the need to identify patterns that signal when a product becomes unavailable and to ascertain the particular days of the year when such occurrences are most likely. The goal is to leverage these models to enhance the ability to predict and manage stockouts effectively.
 
 
 
@@ -57,10 +52,10 @@ Algorithms:
 
 •	Random Forest: 
 
-Random Forest is an ensemble learning algorithm that builds multiple decision trees during training and combines their predictions to produce a more accurate and robust result. In predicting shortage periods of medical products using the provided dataset, a Random Forest model is trained on product features like price, manufacturer details, and feature properties. After preprocessing and tuning, the model identifies patterns associated with product availability. Feature importance analysis helps pinpoint critical factors affecting shortages. Evaluation focuses on metrics like accuracy and recall to minimize false negatives. Time series considerations may be integrated to capture temporal patterns effectively. Overall, the Random Forest model accurately predicts shortage periods based on the dataset's information.
+Random Forest is an ensemble learning algorithm that builds multiple decision trees during training and combines their predictions to produce a more accurate and robust result. In predicting shortage periods of medical products using the provided dataset, a Random Forest model is trained on product features like price, manufacturer details, and feature properties. After preprocessing and tuning, the model identifies patterns associated with product availability. Feature importance analysis helps pinpoint critical factors affecting shortages. Evaluation focuses on metrics like accuracy and recall to minimize false negatives. Time series considerations may be integrated to capture temporal patterns effectively. Overall, the Random Forest model accurately predicts shortage periods based on the dataset's information. 
 
 
 •	Gradient Boosting: 
 
 Gradient Boosting algorithms, including popular implementations like XGBoost and LightGBM, offer powerful predictive modeling capabilities. In predicting shortage periods of medical products, Gradient Boosting models, such as XGBoost or LightGBM, are trained on the dataset's product features. These include description, volume, and product properties. Following preprocessing and hyperparameter tuning, the model learns complex relationships in the data to identify patterns associated with product availability. Feature importance analysis aids in understanding key predictors of shortages. Evaluation focuses on metrics like accuracy and recall, with an emphasis on minimizing false negatives. Time series considerations can be incorporated for capturing temporal patterns effectively. Ultimately, Gradient Boosting models provide accurate predictions of shortage periods based on the dataset's information.
-![image](https://github.com/jaid33p/BigDataProject/assets/68546719/65b80b28-85c1-49cd-a56a-ad61caa4aa2a)
+
