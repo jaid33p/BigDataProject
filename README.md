@@ -19,7 +19,7 @@ Fourthly, there is Network which contains BusinessYear, StateCode, IssuerId, Sou
 
 The fifth table, Benefit Cost and Sharing, consolidates benefits based on a common plan ID, featuring parameters such as benefit name, business year, PlanID, IssuerID, LimitQty, and LimitUnit.
 
-The second table, Rate, includes parameters like Age, IssuerId, PlanID, StateCode, Tobacco use, and various subscriber and dependent categories, aiding in determining insurance plan rates.
+The sixth table, Rate, includes parameters like Age, IssuerId, PlanID, StateCode, Tobacco use, and various subscriber and dependent categories, aiding in determining insurance plan rates.
 
 
 
