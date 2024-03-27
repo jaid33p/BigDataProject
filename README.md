@@ -33,7 +33,7 @@ A decision tree classifier is implemented for predicting health insurance plans 
 
 References:
 
-https://www.kaggle.com/datasets/hhs/health-insurance-marketplace
-https://www.cms.gov/research-statistics-data-systems/marketplace-products/2022-marketplace-open-enrollment-period-public-use-files
+1. https://www.kaggle.com/datasets/hhs/health-insurance-marketplace
+2. https://www.cms.gov/research-statistics-data-systems/marketplace-products/2022-marketplace-open-enrollment-period-public-use-files
 
 
