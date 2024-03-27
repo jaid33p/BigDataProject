@@ -1,61 +1,34 @@
 # BigDataProject
 
-OVERVIEW:
+Overview:
 
-Mid-East Canadian Pharmaceutical (MECP) is a company in the medical sector that specializes in offering cold supply chain solutions for medical equipment to various entities. With an extensive inventory of over 508,000 medical products, their goal is to use publicly available data from their suppliers to identify in-demand medical products at specific times throughout the year. They aim to develop a training model using existing data to forecast periods of increased demand for specific medical products. This predictive capability allows them to proactively stock these products before the demand rises, ensuring timely availability and efficient supply chain management.
-
-
+The goal of this project is to develop a recommendation system for health insurance plans, including Benefits_Cost_Sharing.csv, Rate.csv, Network.csv, PlanAttribute.csv, Business Rules.csv, ServiceArea.csv.They encompass details about various insurance plans, their benefits, costs, provider networks, and plan attributes. The primary aim of the recommendation system is to offer suitable health insurance plans based on user-provided parameters such as health conditions, budget, location, marital status, dependents, and more.
 
 Dataset:
 
-Based on the details provided by MECP, the dataset requires scraping from the internet using a crawler script. Initially, the dataset comprises the following fields:
-
-
- Name (varchar): Product name.
- Description (varchar): Product description.
- Catalogue Number: Unique identifier for the product in the catalogue.
- Price (float): Product price.
- Availability (varchar): Availability status of the product.
- Manufacturer Number (int): Identifier for the manufacturer of the product.
- Invoice Description (varchar): Description of the product on the invoice.
- Feature Property (varchar): Specific features of the product.
- Sterility (bool): Sterility status of the product.
- Link (varchar): URL link for more information about the product.
- Brand Name (varchar): Brand name associated with the product.
- Outer Diameter (float): Outer diameter measurement of the product.
- Needle Length (float): Length of the needle.
- Volume (float): Volume measurement of the product.
- Color (varchar): Color of the product.
- Inner Diameter (float): Inner diameter of the product.
- Size (varchar): Size specification of the product. 
- Age (datetime): Age-related information (e.g., expiration date).
- Shape (varchar): Shape of the product. 
- Catheter Length (float): Length of the catheter (if applicable).
- Composition Ingredient (varchar): Composition or ingredients of the product.
-
-Some of the parameters which are most relevant in are Price, Manufacturer Number, Feature Property, Sterility, Outer Diameter, Needle Length, Color, Size, Age, Catheter Length and Composition Ingredient as these likely to be those that provide meaningful insights into factors affecting product availability.
+The dataset utilized is named the Health Insurance Marketplace dataset, comprising five tables.
+The first table, Benefit Cost and Sharing, consolidates benefits based on a common plan ID, featuring parameters such as benefit name, business year, PlanID, IssuerID, LimitQty, and LimitUnit.
+The second table, Rate, includes parameters like Age, IssuerId, PlanID, StateCode, Tobacco use, and various subscriber and dependent categories, aiding in determining insurance plan rates.
+Plan Attributes, the third table, provides details on parameters such as IssuerId, PlanID, Source, Plan Start and Expiration Dates, Guaranteed Rate, NetworkId, and CSRVariation Time, offering comprehensive information about different plan aspects.
+Business Rules, the fourth table, includes parameters such as IssuerID, Source Name, StandardComponent, and rules related to maximum dependents for various family structures, assisting in filtering and identifying the most suitable plans for users based on predefined rules.
+Service Area is the fifth table, including BusinessYear, StateCode, IssuerId, SourceName, VersionNum,ServiceAreaId, ServiceAreaName, CoverEntireState, County, PartialCounty, ZipCodes, PartialCountyJustification, MarketCoverage providing more information on the Service area of the health insurance.
+Lastly, there is Network which contains BusinessYear, StateCode, IssuerId, SourceName, VersionNum, NetworkName, NetworkId, NetworkURL  and MarketCoverage giving more insight into the type of network being used by in which particular business year.
 
 
 Research Question:
 
- 	
-As per MECP's specifications, the primary objective is to develop a predictive model that can accurately pinpoint times when shortages of medical products are likely to occur. In simpler terms, they aim to use data and analysis to anticipate when there might be a lack of specific medical items, helping them proactively manage their inventory and ensure timely availability of essential products.
-
+Our objective is to tackle several inquiries to aid in constructing a recommender system and conducting its analysis. Initially, we seek to identify the predominant health insurance plans available in the user's locality. Additionally, we aim to understand how an individual's circumstances influence the cost of their chosen plan. Furthermore, we aim to compare two algorithms for recommendation and assess their respective performances to determine which one is more suitable for our use case.
 
 Model Class:
 
-As per the outlined specifications, our approach entails utilizing supervised learning models for the training process. This decision is motivated by the need to identify patterns that signal when a product becomes unavailable and to ascertain the particular days of the year when such occurrences are most likely. The goal is to leverage these models to enhance the ability to predict and manage stockouts effectively.
-
-
+We'll employ Content-based filtering and Decision Tree algorithms to develop our recommendation system. These algorithms are commonly used to offer personalized suggestions to users. Content-based filtering recommends items based on features that align with a user's past interests, while Decision Trees construct models for decision-making. In recommendation systems, Decision Trees predict user interests by analyzing item attributes and user preferences.
 
 Algorithms:
 
-•	Random Forest: 
+Content-Based Filtering:
+Content-based filtering in this implementation recommends health insurance plans by analyzing user preferences and the features of insurance plans. User preferences, such as demographics and tobacco use, are translated into a feature vector. Cosine similarity is then employed to measure the similarity between user profiles and insurance plans in the training set. The top N most similar plans are recommended to each user. Finally, the system's performance is evaluated using metrics like the F1 score and classification report.
 
-Random Forest is an ensemble learning algorithm that builds multiple decision trees during training and combines their predictions to produce a more accurate and robust result. In predicting shortage periods of medical products using the provided dataset, a Random Forest model is trained on product features like price, manufacturer details, and feature properties. After preprocessing and tuning, the model identifies patterns associated with product availability. Feature importance analysis helps pinpoint critical factors affecting shortages. Evaluation focuses on metrics like accuracy and recall to minimize false negatives. Time series considerations may be integrated to capture temporal patterns effectively. Overall, the Random Forest model accurately predicts shortage periods based on the dataset's information. 
+Decision Tree:
+A decision tree classifier is implemented for predicting health insurance plans based on various features such as state code, source name, tobacco use, age, dependents, and tobacco rate. The dataset is split into training and testing sets using the train_test_split function. The decision tree classifier is trained on the training data using the fit method. Once trained, the decision tree is visualized using the plot_tree, which generates a graphical representation of the decision tree structure. The resulting tree illustrates how the model makes decisions based on the selected features to classify instances into different plan IDs.
 
-
-•	Gradient Boosting: 
-
-Gradient Boosting algorithms, including popular implementations like XGBoost and LightGBM, offer powerful predictive modeling capabilities. In predicting shortage periods of medical products, Gradient Boosting models, such as XGBoost or LightGBM, are trained on the dataset's product features. These include description, volume, and product properties. Following preprocessing and hyperparameter tuning, the model learns complex relationships in the data to identify patterns associated with product availability. Feature importance analysis aids in understanding key predictors of shortages. Evaluation focuses on metrics like accuracy and recall, with an emphasis on minimizing false negatives. Time series considerations can be incorporated for capturing temporal patterns effectively. Ultimately, Gradient Boosting models provide accurate predictions of shortage periods based on the dataset's information.
 
