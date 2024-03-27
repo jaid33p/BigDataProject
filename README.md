@@ -10,10 +10,15 @@ The dataset utilized is named the Health Insurance Marketplace dataset, comprisi
 
 
 Plan Attributes, the first table, provides details on parameters such as IssuerId, PlanID, Source, Plan Start and Expiration Dates, Guaranteed Rate, NetworkId, and CSRVariation Time, offering comprehensive information about different plan aspects.
+
 Business Rules, the second table, includes parameters such as IssuerID, Source Name, StandardComponent, and rules related to maximum dependents for various family structures, assisting in filtering and identifying the most suitable plans for users based on predefined rules.
+
 Service Area is the third table, including BusinessYear, StateCode, IssuerId, SourceName, VersionNum,ServiceAreaId, ServiceAreaName, CoverEntireState, County, PartialCounty, ZipCodes, PartialCountyJustification, MarketCoverage providing more information on the Service area of the health insurance.
+
 Fourthly, there is Network which contains BusinessYear, StateCode, IssuerId, SourceName, VersionNum, NetworkName, NetworkId, NetworkURL  and MarketCoverage giving more insight into the type of network being used by in which particular business year.
+
 The fifth table, Benefit Cost and Sharing, consolidates benefits based on a common plan ID, featuring parameters such as benefit name, business year, PlanID, IssuerID, LimitQty, and LimitUnit.
+
 The second table, Rate, includes parameters like Age, IssuerId, PlanID, StateCode, Tobacco use, and various subscriber and dependent categories, aiding in determining insurance plan rates.
 
 
