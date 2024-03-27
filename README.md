@@ -31,4 +31,9 @@ Content-based filtering in this implementation recommends health insurance plans
 Decision Tree:
 A decision tree classifier is implemented for predicting health insurance plans based on various features such as state code, source name, tobacco use, age, dependents, and tobacco rate. The dataset is split into training and testing sets using the train_test_split function. The decision tree classifier is trained on the training data using the fit method. Once trained, the decision tree is visualized using the plot_tree, which generates a graphical representation of the decision tree structure. The resulting tree illustrates how the model makes decisions based on the selected features to classify instances into different plan IDs.
 
+References:
+
+https://www.kaggle.com/datasets/hhs/health-insurance-marketplace
+https://www.cms.gov/research-statistics-data-systems/marketplace-products/2022-marketplace-open-enrollment-period-public-use-files
+
 
