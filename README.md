@@ -2,7 +2,7 @@
 
 Overview:
 
-The goal of this project is to develop a recommendation system for health insurance plans, including Benefits_Cost_Sharing.csv, Rate.csv, Network.csv, PlanAttribute.csv, Business Rules.csv, ServiceArea.csv.They encompass details about various insurance plans, their benefits, costs, provider networks, and plan attributes. The primary aim of the recommendation system is to offer suitable health insurance plans based on user-provided parameters such as health conditions, budget, location, marital status, dependents, and more.
+The goal of this project is to develop a recommendation system for health insurance plans, including Network.csv, PlanAttribute.csv, Business Rules.csv, ServiceArea.csv, Benefits_Cost_Sharing.csv, Rate.csv.They encompass details about various insurance plans, their benefits, costs, provider networks, and plan attributes. The primary aim of the recommendation system is to offer suitable health insurance plans based on user-provided parameters such as health conditions, budget, location, marital status, dependents, and more.
 
 Dataset:
 
