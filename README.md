@@ -2,7 +2,7 @@
 
 Overview:
 
-The goal of this project is to develop a recommendation system for health insurance plans, including Network.csv, PlanAttribute.csv, Business Rules.csv, ServiceArea.csv, Benefits_Cost_Sharing.csv, Rate.csv.They encompass details about various insurance plans, their benefits, costs, provider networks, and plan attributes. The primary aim of the recommendation system is to offer suitable health insurance plans based on user-provided parameters such as health conditions, budget, location, marital status, dependents, and more.
+The goal of this project is to develop a Classification system for health insurance plans, including Network.csv, PlanAttribute.csv, Business Rules.csv, ServiceArea.csv, Benefits_Cost_Sharing.csv, Rate.csv.They encompass details about various insurance plans, their benefits, costs, provider networks, and plan attributes. The primary aim of the recommendation system is to offer suitable health insurance plans based on user-provided parameters such as health conditions, budget, location, marital status, dependents, and more.
 
 Dataset:
 
@@ -25,16 +25,18 @@ The sixth table, Rate, includes parameters like Age, IssuerId, PlanID, StateCode
 
 Research Question:
 
-Our objective is to tackle several inquiries to aid in constructing a recommender system and conducting its analysis. Initially, we seek to identify the predominant health insurance plans available in the user's locality. Additionally, we aim to understand how an individual's circumstances influence the cost of their chosen plan. Furthermore, we aim to compare two algorithms for recommendation and assess their respective performances to determine which one is more suitable for our use case.
+Our objective is to tackle several inquiries to aid in constructing a Classification system and conducting its analysis. Initially, we seek to identify the predominant health insurance plans available in the user's locality. Additionally, we aim to understand how an individual's circumstances influence the cost of their chosen plan. Furthermore, we aim to compare three algorithms for classification and assess their respective performances to determine which one is more suitable for our use case.
 
 Model Class:
 
-We'll employ Content-based filtering and Decision Tree algorithms to develop our recommendation system. These algorithms are commonly used to offer personalized suggestions to users. Content-based filtering recommends items based on features that align with a user's past interests, while Decision Trees construct models for decision-making. In recommendation systems, Decision Trees predict user interests by analyzing item attributes and user preferences.
+We'll employ Random Forest, XGBoosting and Decision Tree algorithms to develop our recommendation system. These algorithms are commonly used to offer personalized suggestions to users. CRandom Forest utilizes an ensemble of decision trees, XGBoost employs gradient boosting techniques, and Decision Trees construct individual trees for classification.
 
 Algorithms:
 
-Content-Based Filtering:
-Content-based filtering in this implementation recommends health insurance plans by analyzing user preferences and the features of insurance plans. User preferences, such as demographics and tobacco use, are translated into a feature vector. Cosine similarity is then employed to measure the similarity between user profiles and insurance plans in the training set. The top N most similar plans are recommended to each user. Finally, the system's performance is evaluated using metrics like the F1 score and classification report.
+Random Forest: 
+Random Forest is an ensemble learning method that constructs multiple decision trees during training and outputs the mode of the classes (classification) or the mean prediction (regression) of the individual trees. It mitigates overfitting by averaging multiple decision trees, resulting in a more robust and accurate model.
+
+XGBoost: XGBoost, short for Extreme Gradient Boosting, is an advanced implementation of gradient boosting algorithms. It systematically boosts the performance of weak learners (individual decision trees) by optimizing a differentiable loss function through gradient descent. It incorporates regularization techniques to prevent overfitting and achieves state-of-the-art performance on various classification tasks.
 
 Decision Tree:
 A decision tree classifier is implemented for predicting health insurance plans based on various features such as state code, source name, tobacco use, age, dependents, and tobacco rate. The dataset is split into training and testing sets using the train_test_split function. The decision tree classifier is trained on the training data using the fit method. Once trained, the decision tree is visualized using the plot_tree, which generates a graphical representation of the decision tree structure. The resulting tree illustrates how the model makes decisions based on the selected features to classify instances into different plan IDs.
